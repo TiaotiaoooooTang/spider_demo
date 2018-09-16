@@ -1,0 +1,53 @@
+一、模拟登录的三种方法：需求：1、被反爬；2、要爬取登录后的数据；
+    1、cookie的使用方法:用途：某些网站是根据cookie实现反爬，所以需要获取cookie并动态的进行处理；
+        headers
+            headers = {
+                'Cookies' :'dsafasbaxb'
+            }
+
+    2、cookies字典
+            cookies = {'key1':'value1',.....}
+
+            response = requests.get(url,cookies=cookies)
+
+    3、 session的使用方法
+        创建对象
+         session= requests.Session()
+
+         session.post(url,data={})
+         session.get(url)
+
+    requests小方法
+        获取cookie对象并和字典进行转换：
+        requetss.utils.dict_from_cookiejar # 转成字典
+        关闭SSL安全认证，https协议的网站：
+        verify=False
+        设置超时：
+        timeout
+
+二、什么是数据提取？
+    从响应中抽取数据，存入数据库
+    #1 数据的分类
+        结构化数据
+            *   json ***
+            json.dumps把字典转成json字符串
+            json.loads把json字符串转成字典
+            json.dump/load操作的是文件对象
+            *   xml (xmltodict：parse/unparse)
+        非结构化数据
+            文本
+            *   html
+            正则和xpath
+
+    #2 什么是json？用于什么样的场景？
+        数据格式        数据传输
+
+    #3 Python中json库的使用方法有哪些？
+        json_data -----> python——dict
+                    loads(将获取的响应转换)
+                    dumps(保存数据)
+
+
+
+
+
