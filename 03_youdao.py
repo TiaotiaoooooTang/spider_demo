@@ -1,4 +1,5 @@
 # http://fanyi.youdao.com/translate_o?smartresult=dict&smartresult=rule
+"""实现有道翻译"""
 import hashlib
 import json
 import random

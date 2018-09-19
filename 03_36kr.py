@@ -1,5 +1,6 @@
 # https://36kr.com/
 # https://36kr.com/api/search-column/mainsite?per_page=20&page=2
+"""爬取36kr网的新闻标题和链接"""
 import requests
 import re
 import sys
